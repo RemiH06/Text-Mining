@@ -1,0 +1,9 @@
+Proyecto1/.venv/
+
+# Copias locales de las obras. No las subas al repositorio.
+Proyecto1/data/**/*.txt
+Proyecto1/data/**/*.pdf
+Proyecto1/data/**/*.html
+Proyecto1/data/**/*.doc
+Proyecto1/data/**/*.docx
+Proyecto1/data/**/*.rtf
