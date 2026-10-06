@@ -1,4 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+.venv/
+env/
 Proyecto1/.venv/
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor/tooling state
+.vscode/
+.claude/
 
 # Copias locales de las obras. No las subas al repositorio.
 Proyecto1/data/**/*.txt

@@ -1,0 +1,216 @@
+==============================================================================
+Pair 1
+==============================================================================
+
+--- Needleman-Wunsch (global) | score = 52 ---
+-G-A-CTTACGCG-CCGTAGCACTTCTGTGATAGCTGCGAGGCGTAT-TGCTACTTGTAC
+ | | |.|| |.| |.||.| || ||.| .|.|| | ||| .|.||| |..|||..||| 
+AGTATCGTA-GTGTCTGTCG-AC-TCCG-AAAAG-T-CGA-CCCTATCTCGTACAAGTA-
+
+GAGATA-GGGTCG-A-CT-TTTC-GGAGT-CGACAGACAC-TACGATACT
+|..||| |..||| | || |..| |.||| |.|| |.|.| ||.| | | 
+GCAATACGCCTCGCAGCTATCACAGAAGTGCTAC-GGCGCGTAAG-T-C-
+
+--- Smith-Waterman (local) | score = 56 | region seq1[2:93] seq2[5:96] ---
+CTTACGCG-CCGTAGCACTTCTGTGATAGCTGCGAGGCGTAT-TGCTACTTGTACGAGAT
+|.|| |.| |.||.| || ||.| .|.|| | ||| .|.||| |..|||..||| |..||
+CGTA-GTGTCTGTCG-AC-TCCG-AAAAG-T-CGA-CCCTATCTCGTACAAGTA-GCAAT
+
+A-GGGTCG-A-CT-TTTC-GGAGT-CGACAGACAC-TACG
+| |..||| | || |..| |.||| |.|| |.|.| ||.|
+ACGCCTCGCAGCTATCACAGAAGTGCTAC-GGCGCGTAAG
+
+==============================================================================
+Pair 2
+==============================================================================
+
+--- Needleman-Wunsch (global) | score = 49 ---
+GTAGTCATTACCCATAGGCGTTTGCTGA-CTATCGGGAGAGGTACGTACGTGAT-ACG-A
+| |  ||..||.| |  |.||.|..||| ||| |  ||..|..| || ||| || ||| |
+G-A--CAGCACGC-T--GAGTATCTTGATCTA-C--GATCGACA-GT-CGT-ATCACGTA
+
+CTGTCGATCGCTCG-TAGATCAAGATAC-TC-A-GCGTGCTG--T-C
+| ||...||.|.|| ||| |||..|.|| .| | |.||..||  | |
+C-GTACCTCTCCCGATAG-TCAGCAAACGCCTATGGGTAATGACTAC
+
+--- Smith-Waterman (local) | score = 56 | region seq1[23:89] seq2[8:70] ---
+GCTGACTATCGGGAGAGGTACGTACGTGATACGACTGTCG-ATCGC-T-CGTA--GATCA
+|||||.||||  ..||  | | |||  ||| ||||.|||| |||.| | ||||  ..||.
+GCTGAGTATC--TTGA--T-C-TAC--GAT-CGACAGTCGTATCACGTACGTACCTCTCC
+
+AGATACTCAGC
+.||||.|||||
+CGATAGTCAGC
+
+==============================================================================
+Pair 3
+==============================================================================
+
+--- Needleman-Wunsch (global) | score = 114 ---
+CTGCATACCGACAAACGTGTGCA--TGCATGCATGCATGCATGCATGCATGCATGCATGC
+..|.|...|.||..||||.||||  |||||||||||||||||||||||||||||||||||
+ACGTACGTCTACGCACGTATGCATGTGCATGCATGCATGCATGCATGCATGCATGCATGC
+
+ATGCATGCACATGCATACGTGCGTGTCTACGTACGT
+|||||||  ||||||.||||..||...||.|.| | 
+ATGCATG--CATGCACACGTTTGTCGGTATGCA-G-
+
+--- Smith-Waterman (local) | score = 121 | region seq1[3:91] seq2[1:91] ---
+CATAC--CGACAAACGTGTGCA--TGCATGCATGCATGCATGCATGCATGCATGCATGCA
+|.|||  |.||..||||.||||  ||||||||||||||||||||||||||||||||||||
+CGTACGTCTACGCACGTATGCATGTGCATGCATGCATGCATGCATGCATGCATGCATGCA
+
+TGCATGCACATGCATACGTGCGTGTCTACGTA
+||||||  ||||||.||||..||...||.|.|
+TGCATG--CATGCACACGTTTGTCGGTATGCA
+
+==============================================================================
+Pair 4
+==============================================================================
+
+--- Needleman-Wunsch (global) | score = 60 ---
+GGATGCGACTAGGAGTCGAGTGTCGATTCTATAGCGATAGCGAGTAG-CGACTAGTCACT
+.|.|..| |||.| .||  ||.|||   |||| ||.|.||.||.||| || |||.||.||
+TGCTATG-CTATG-CTC--GTATCG---CTAT-GCTACAGTGACTAGTCG-CTACTCGCT
+
+GT-ACTGTAGCATAGCGATACGA-GCATAG-CATAGCA
+.| .||.|||.||.|..|..||| .|.||| |..|.|.
+ATCGCTATAGAATCGACACTCGACTCCTAGTCGCATCC
+
+--- Smith-Waterman (local) | score = 66 | region seq1[3:94] seq2[0:86] ---
+TGCGA--CTAGGAGTCGAGTGTCGATTCTATAGCGATAGCGAGTAG-CGACTAGTCACTG
+|||.|  |||.| .||  ||.|||   |||| ||.|.||.||.||| || |||.||.||.
+TGCTATGCTATG-CTC--GTATCG---CTAT-GCTACAGTGACTAGTCG-CTACTCGCTA
+
+T-ACTGTAGCATAGCGATACGA-GCATAGCATAGCA
+| .||.|||.||.|..|..||| .|.|||  |.|||
+TCGCTATAGAATCGACACTCGACTCCTAG--TCGCA
+
+==============================================================================
+Pair 5
+==============================================================================
+
+--- Needleman-Wunsch (global) | score = 140 ---
+TCGATCGTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCT
+  |  | |||||||||||||||||||||||||||||||||||||||||||||||||||||
+--G--C-TAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCT
+
+AGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGC
+||||||||||||||||||||| |  |  |.|.| |
+AGCTAGCTAGCTAGCTAGCTA-C--G--ATCGA-C
+
+--- Smith-Waterman (local) | score = 155 | region seq1[9:93] seq2[0:83] ---
+GCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTA
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+GCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTA
+
+GCTAGCTAGCTAGCTAGCTAGCTA
+|||||||||||||||| |.|.|.|
+GCTAGCTAGCTAGCTA-CGATCGA
+
+==============================================================================
+Pair 6
+==============================================================================
+
+--- Needleman-Wunsch (global) | score = 131 ---
+ATGCGTATACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGT
+   ||  |||||||||||||||||||||||||||||||||||||||||||||||||||||
+---CG--TACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGT
+
+ACGTACGTACGTACGTACGTACGTACGTACG
+|||||||||||||||||  ||||  |  | .
+ACGTACGTACGTACGTA--TACG--C--A-T
+
+--- Smith-Waterman (local) | score = 149 | region seq1[9:89] seq2[0:78] ---
+CGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTA
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+CGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTA
+
+CGTACGTACGTACGTACGTA
+||||||||||||  ||||.|
+CGTACGTACGTA--TACGCA
+
+==============================================================================
+Pair 7
+==============================================================================
+
+--- Needleman-Wunsch (global) | score = 51 ---
+TTAAATTATATATATACGCGCGCGCGACACACACACACTGATCTATACGCGCGCGCG---
+        |||||||| |||||..||| .|.| .| .| |  |||| ||||||||||   
+--------TATATATA-GCGCGATCGA-TCGC-TA-TC-G--CTAT-CGCGCGCGCGTAT
+
+CGAT-AGCGATAGCG-ATCGATCGCGC---TATATAT-A--T-A
+.||| ||.|...|.| .|||..|||||   ||||||| |  | |
+AGATCAGTGTGTGTGTGTCGCGCGCGCGTATATATATAATTTAA
+
+--- Smith-Waterman (local) | score = 79 | region seq1[8:92] seq2[0:82] ---
+TATATATACGCGCGCGCGACACACACACACTGATCTATACGCGCGCGCG---CGAT-AGC
+|||||||| |||||..||| .|.| .| .| |  |||| ||||||||||   .||| ||.
+TATATATA-GCGCGATCGA-TCGC-TA-TC-G--CTAT-CGCGCGCGCGTATAGATCAGT
+
+GATAGCG-ATCGATCGCGC-TATATATATA
+|...|.| .|||..||||| ||||||||||
+GTGTGTGTGTCGCGCGCGCGTATATATATA
+
+==============================================================================
+Pair 8
+==============================================================================
+
+--- Needleman-Wunsch (global) | score = 76 ---
+CTACTGAGTCGTAGCTAGCGAGTCGAGTGCGTGCATGCATGCATGCATGCATGCATGCAT
+..| |  | |.| ||..|| | | |..|||.|||||||||||||||||||||||||||||
+GCA-T--G-CAT-GCATGC-A-T-GCATGCATGCATGCATGCATGCATGCATGCATGCAT
+
+GCATG-CATG-CATGCATGC-ATGCATGCA-TGC
+|||.| |..| |..||..|| |.| |..|| |..
+GCACGACTCGACTCGCTAGCTACG-ACTCAGTAG
+
+--- Smith-Waterman (local) | score = 111 | region seq1[32:89] seq2[0:57] ---
+GCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATG
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||.|
+GCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCACG
+
+==============================================================================
+Pair 9
+==============================================================================
+
+--- Needleman-Wunsch (global) | score = 163 ---
+GCATGCGACTTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTA
+||||  | | ||||||||||||||||||||||||||||||||||||||||||||||||||
+GCAT--G-C-TAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTA
+
+GCTAGCTAGCTAGCTAGCTAGCTAGCTAGCATGC
+||||||||||||||||||||||||..|.||||||
+GCTAGCTAGCTAGCTAGCTAGCTAAGTCGCATGC
+
+--- Smith-Waterman (local) | score = 163 | region seq1[0:94] seq2[0:90] ---
+GCATGCGACTTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTA
+||||  | | ||||||||||||||||||||||||||||||||||||||||||||||||||
+GCAT--G-C-TAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTA
+
+GCTAGCTAGCTAGCTAGCTAGCTAGCTAGCATGC
+||||||||||||||||||||||||..|.||||||
+GCTAGCTAGCTAGCTAGCTAGCTAAGTCGCATGC
+
+==============================================================================
+Pair 10
+==============================================================================
+
+--- Needleman-Wunsch (global) | score = 144 ---
+CGCGATAGCGATAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCT
+  |  ||||  |||||||||||||||||||||||||||||||||||||||||||||||||
+--C--TAGC--TAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCT
+
+AGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAG
+|||||||||||||||||||||  |.||||.|..|
+AGCTAGCTAGCTAGCTAGCTA--TCGCTATCGCG
+
+--- Smith-Waterman (local) | score = 154 | region seq1[14:93] seq2[0:81] ---
+CTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAG
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+CTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAG
+
+CTAGCTAGCTAGCTA--GCTA
+|||||||||||||||  ||||
+CTAGCTAGCTAGCTATCGCTA
+
