@@ -29,8 +29,10 @@ def get_classifiers() -> dict:
     """Fresh, unfitted classifiers keyed by display name."""
     return {
         "Naive Bayes": MultinomialNB(alpha=1.0),
-        "Logistic Regression": LogisticRegression(max_iter=2000, random_state=RANDOM_STATE),
-        "Linear SVM": LinearSVC(C=0.1, random_state=RANDOM_STATE),
+        # Raw counts are unscaled, so both solvers need more iterations than
+        # the default to converge on the larger n-gram vocabularies.
+        "Logistic Regression": LogisticRegression(max_iter=5000, random_state=RANDOM_STATE),
+        "Linear SVM": LinearSVC(C=0.1, max_iter=10000, random_state=RANDOM_STATE),
     }
 
 

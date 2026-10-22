@@ -16,6 +16,7 @@ SentimentAnalysis/
 ├── evaluation.py        # Part 4: metrics, confusion matrices, length/rating breakdowns
 ├── error_analysis.py    # Part 5: misclassified reviews tagged with linguistic cues
 ├── run_pipeline.py      # Runs Parts 1-5 end to end
+├── Sentiment_Analysis.ipynb  # Same pipeline step by step, with charts and error analysis (Spanish)
 ├── requirements.txt
 ├── data/                # IMDb archive + preprocessed cache (git-ignored)
 ├── results/             # CSVs and figures/ written by run_pipeline.py
@@ -35,6 +36,15 @@ pip install -r requirements.txt
 ```bash
 python data.py           # downloads ~84 MB from Stanford, prints split sizes
 python run_pipeline.py   # trains, evaluates and writes everything to results/
+```
+
+If Stanford's server is down, `data.py` falls back to the Hugging Face copy
+(`stanfordnlp/imdb`), which has the same reviews but no star ratings.
+
+For the notebook, select `.venv` as the kernel (in VS Code) or register it:
+
+```bash
+python -m ipykernel install --user --name sentiment-ngrams
 ```
 
 ## Design decisions
