@@ -1,0 +1,8 @@
+torch
+transformers
+tokenizers
+datasets
+huggingface_hub
+pandas
+plotly
+ipykernel

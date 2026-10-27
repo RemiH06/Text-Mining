@@ -32,3 +32,6 @@ Proyecto1/data/**/*.rtf
 # IMDb dataset (~480 MB once extracted). data.py downloads it on demand.
 SentimentAnalysis/data/*
 !SentimentAnalysis/data/.gitkeep
+
+# Modelos guardados por los notebooks de Hugging Face
+HuggingFace/outputs/
