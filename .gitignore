@@ -40,3 +40,4 @@ HuggingFace/outputs/
 SentimentAnalysisTransformers/data/
 SentimentAnalysisTransformers/.env
 SentimentAnalysisTransformers/plan.md
+SentimentAnalysisTransformers/modelo/modelo_postura/
