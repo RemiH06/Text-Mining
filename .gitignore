@@ -35,3 +35,8 @@ SentimentAnalysis/data/*
 
 # Modelos guardados por los notebooks de Hugging Face
 HuggingFace/outputs/
+
+# Comentarios recolectados de YouTube y llave de la API
+SentimentAnalysisTransformers/data/
+SentimentAnalysisTransformers/.env
+SentimentAnalysisTransformers/plan.md

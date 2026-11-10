@@ -1,0 +1,11 @@
+google-api-python-client
+python-dotenv
+langdetect
+pandas
+scikit-learn
+spacy
+torch
+transformers
+datasets
+plotly
+ipykernel
