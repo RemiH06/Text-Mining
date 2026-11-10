@@ -14,7 +14,8 @@ import pandas as pd
 from .config import COMMENTS_CSV, DATA, PRO_ELECCION, SEED
 from .label import MIN_WORDS, is_spanish, seed_side
 
-REVISIONS = [DATA / "revision_diego.csv", DATA / "revision_remi.csv"]
+# etiquetas_iniciales.csv: las 81 etiquetas de las revisiones, rescatadas cuando se borraron.
+REVISIONS = [DATA / "revision_diego.csv", DATA / "revision_remi.csv", DATA / "etiquetas_iniciales.csv"]
 LOTE_CSV = DATA / "por_etiquetar.csv"
 FINAL_CSV = DATA / "comentarios_aborto.csv"
 TARGET = 1000
@@ -77,6 +78,10 @@ def unite():
         print("Etiquetas inválidas; corrígelas y vuelve a correr:")
         print(invalid[["comment_id", "postura"]].to_string(index=False))
         sys.exit(1)
+    # El texto sale siempre del original de YouTube: Excel convierte en fórmula lo que empieza
+    # con "-", "=" o "+" (así un comentario terminó como "#¿NOMBRE?").
+    original = pd.read_csv(COMMENTS_CSV).drop_duplicates("comment_id").set_index("comment_id")["text"]
+    df["text"] = df["comment_id"].map(original).fillna(df["text"])
     # Sin BOM: el notebook lee con pd.read_csv por defecto.
     df[COLS].to_csv(FINAL_CSV, index=False, encoding="utf-8")
     print(f"{FINAL_CSV.name}: {len(df)} comentarios, {df['postura'].notna().sum()} etiquetados")
